@@ -1,0 +1,10 @@
+pandas
+numpy
+xlrd
+sklearn
+filetype
+Pillow
+matplotlib
+seaborn
+tornado
+py-kim
