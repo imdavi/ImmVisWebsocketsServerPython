@@ -2,12 +2,13 @@ from kim import PolymorphicMapper, field
 from .action import Action
 from .load import LoadDataFrameFromFile
 from .hello import HelloAction
+from .list_datasets import ListAvailableDatasets
 
 
 class ActionMapper(PolymorphicMapper):
     __type__ = Action
 
-    object_type = field.String(choices=['load_dataset', 'hello'])
+    object_type = field.String(choices=['load_dataset', 'hello', 'list_datasets'])
 
     __mapper_args__ = {
         'polymorphic_on': object_type,
@@ -30,4 +31,11 @@ class EchoMapper(ActionMapper):
 
     __mapper_args__ = {
         'polymorphic_name': 'hello'
+    }
+
+class ListDatasetsMapper(ActionMapper):
+    __type__ = ListAvailableDatasets
+
+    __mapper_args__ = {
+        'polymorphic_name': 'list_datasets'
     }

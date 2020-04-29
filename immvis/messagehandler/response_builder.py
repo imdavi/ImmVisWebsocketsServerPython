@@ -34,7 +34,7 @@ def _build_data_field(data: object) -> object:
             if type(key) is str and value is not None:
                 data_obj[key] = value
     else:
-        data_obj[_FIELD_VALUES] = data
+        data_obj = data
 
     return data_obj
 
