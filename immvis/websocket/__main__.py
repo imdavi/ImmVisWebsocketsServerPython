@@ -3,6 +3,7 @@ import tornado.web
 import tornado.websocket
 from .websocket_server import ImmVisWebSocket
 from ..messagehandler import MessageParser, DataStore, MessageHandler
+from ..messagehandler.response import ResponseBuilder, DefaultResponseBuilder
 from ..discovery import DiscoveryService
 import sys
 
@@ -11,7 +12,8 @@ MAX_WAIT_SECONDS_BEFORE_SHUTDOWN = 3
 def create_app() -> tornado.web.Application:
     message_parser = MessageParser()
     data_store = DataStore()
-    message_handler = MessageHandler(message_parser, data_store)
+    response_builder = DefaultResponseBuilder()
+    message_handler = MessageHandler(message_parser, data_store, response_builder)
 
     discovery_service = DiscoveryService(debug=True)
     discovery_service.start()
