@@ -17,7 +17,7 @@ If you already have them installed, please install the Python dependencies liste
 To run the server we recommend one of the following approaches:
 
 - Visual Studio Code: open the root folder using Visual Studio Code and run the debug configuration `Run ImmVis Websocket Server`
-- Command line / Terminal: from the root folder, run the command `python -m immvis.websocket`. Please note that we are still working to be able to close the server after running it using this method. Apparently Tornado server needs some workarounds to be "closeable" using Ctrl+C. If you don't know how to close the process on your operating system, please use Visual Studio Code for now.
+- Command line / Terminal: from the root folder, run the command `python -m immvis.websocket`. To close the server just press `CTRL+C` or kill the python process.
 
 ## Adding new features
 
