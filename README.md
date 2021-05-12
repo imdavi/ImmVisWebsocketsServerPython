@@ -1,3 +1,8 @@
+# DEPRECATED
+
+This project was deprecated in favour of https://github.com/imdavi/ImmVisServerPython.
+
+
 # ImmVis Websocket Server
 
 This is the websocket version of ImmVis, a framework that aims to connect different data visualization platforms to a data analysis service written in Python.
